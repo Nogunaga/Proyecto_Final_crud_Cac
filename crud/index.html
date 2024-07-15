@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" CRUD">
+    <meta name="author" content="Daniel Ariza">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="CRUD"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Proyecto final CRUD _cAc</title>
+</head>
+
+<body>
+    <h1>Mi proyecto CRUD</h1>
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Nombre">
+        <input type="text" id="email" placeholder="Correo electrónico">
+        <button type="submit">Agregar</button>
+    </form>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo electrónico</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="userList"></tbody>
+    </table>
+
+    <!-- Modal para editar usuarios -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Editar Usuario</h2>
+            <input type="text" id="editName" placeholder="Nuevo nombre">
+            <input type="text" id="editEmail" placeholder="Nuevo correo electrónico">
+            <button onclick="saveChanges()">Guardar cambios</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
